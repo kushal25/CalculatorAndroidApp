@@ -13,22 +13,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/firstnum"
-        android:inputType="numberDecimal"
+        android:focusableInTouchMode="true"
+        android:inputType="numberSigned|numberDecimal"
         android:hint="Enter First Number"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/secondnum"
-        android:inputType="numberDecimal"
-        android:paddingTop="10dp"
+        android:inputType="numberSigned|numberDecimal"
+        android:paddingTop="20dp"
         android:layout_below="@+id/firstnum"
         android:hint="Enter Second Number"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_below="@+id/secondnum"
-
+        android:weightSum="4.0"
         android:id="@+id/operations"
         android:layout_height="wrap_content">
 
@@ -36,24 +37,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/add"
+            android:textSize="20sp"
+            android:layout_weight="1.0"
             android:text="+"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/subtract"
+            android:textSize="20sp"
+            android:layout_weight="1.0"
             android:text="-"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/multiply"
+            android:layout_weight="1.0"
+            android:textSize="20sp"
             android:text="*"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/division"
+            android:textSize="20sp"
+            android:layout_weight="1.0"
             android:text="/"/>
 
     </LinearLayout>
@@ -63,6 +72,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/clear"
+        android:textSize="20sp"
         android:layout_below="@+id/operations"
         android:paddingTop="10dp"
         android:layout_centerHorizontal="true"
@@ -74,6 +84,7 @@
         android:id="@+id/result"
         android:paddingTop="15dp"
         android:textSize="25sp"
+        android:textColor="#000"
         android:layout_centerVertical="true"
         android:layout_below="@+id/clear"
         android:layout_centerHorizontal="true"
